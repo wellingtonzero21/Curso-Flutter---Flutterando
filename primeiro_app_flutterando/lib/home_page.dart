@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app_flutterando/app_controller.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,10 +17,9 @@ class _HomePageState extends State<HomePage> {
         title: Center(child: Text('Home Page')),
       ),
       body: Center(
-        child: Switch(value: isDarkTheme, onChanged: (value){
-          setState(() {
-            isDarkTheme = value;
-          });;
+        child: Switch(value: AppController.instance.isDarkTheme, onChanged: (value){
+             AppController.instance.changeTheme();
+          ;;
         }),
       ),
       floatingActionButton:FloatingActionButton(
