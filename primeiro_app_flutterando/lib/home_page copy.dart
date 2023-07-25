@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app_flutterando/app_controller%20copy.dart';
 
 class AppWidgetPratica extends StatefulWidget {
   @override
@@ -17,7 +18,9 @@ class _AppWidgetPraticaState extends State<AppWidgetPratica> {
             ),
         ),
       body: Center(
-        child: Text('Contador: ${counter}'),
+        child: Switch(value: AppControllerPratica.instance.isDarkTheme, onChanged: (value){
+          AppControllerPratica.instance.changeTheme();
+        }),
         ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

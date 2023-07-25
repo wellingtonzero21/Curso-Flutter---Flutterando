@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Switch(value: AppController.instance.isDarkTheme, onChanged: (value){
              AppController.instance.changeTheme();
-          ;;
         }),
       ),
       floatingActionButton:FloatingActionButton(
