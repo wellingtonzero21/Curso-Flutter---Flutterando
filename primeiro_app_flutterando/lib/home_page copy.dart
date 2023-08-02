@@ -30,6 +30,6 @@ class _AppWidgetPraticaState extends State<AppWidgetPratica> {
           });
         },
       ),
-    )
+    );
   }
 }
