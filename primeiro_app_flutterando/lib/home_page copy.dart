@@ -13,14 +13,11 @@ class _AppWidgetPraticaState extends State<AppWidgetPratica> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(
-            child: Text('Home Page'),
-            ),
+            title: Text('Home Page'),
+        actions: [CustomSwitch(),],
         ),
       body: Center(
-        child: Switch(value: AppControllerPratica.instance.isDarkTheme, onChanged: (value){
-          AppControllerPratica.instance.changeTheme();
-        }),
+        child: CustomSwitch(),
         ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -31,5 +28,16 @@ class _AppWidgetPraticaState extends State<AppWidgetPratica> {
         },
       ),
     );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  const CustomSwitch({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(value: AppControllerPratica.instance.isDarkTheme, onChanged: (value){
+          AppControllerPratica.instance.changeTheme();
+        },);
   }
 }
