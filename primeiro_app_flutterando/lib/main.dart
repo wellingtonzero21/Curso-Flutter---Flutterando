@@ -7,5 +7,5 @@ import 'home_page.dart';
 import './home_page copy.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(AppWidget());
 }

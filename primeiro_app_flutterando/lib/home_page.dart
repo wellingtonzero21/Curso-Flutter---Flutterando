@@ -14,13 +14,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Home Page')),
+        title: Text('Home Page'),
+        actions: [CustomSwitchPratica()],
       ),
-      body: Center(
-        child: Switch(value: AppController.instance.isDarkTheme, onChanged: (value){
-             AppController.instance.changeTheme();
-        }),
-      ),
+      body: Container(
+        child: Center(
+          child: Text("Contador $counter"),
+        ),
+        ),
       floatingActionButton:FloatingActionButton(
         child: Icon(Icons.add),
         onPressed:() {
@@ -30,5 +31,16 @@ class _HomePageState extends State<HomePage> {
         },
       ),
     );
+  }
+}
+
+class CustomSwitchPratica extends StatelessWidget {
+  const CustomSwitchPratica({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(value: AppController.instance.isDarkTheme, onChanged: (value){
+               AppController.instance.changeTheme();
+               },);
   }
 }
