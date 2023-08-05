@@ -19,7 +19,8 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(
         child: Center(
-          child: Text("Contador $counter"),
+          child:
+           Text("Contador $counter"),
         ),
         ),
       floatingActionButton:FloatingActionButton(

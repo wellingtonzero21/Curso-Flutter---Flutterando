@@ -19,11 +19,32 @@ class _AppWidgetPraticaState extends State<AppWidgetPratica> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
+      child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: [  
             Text('Contador $counter'),
             CustomSwitch(),
+            Container(height: 30,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly, crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.black,
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.black,
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.black,
+              ),
+            ],
+          ),
           ],
         ),
       ),
