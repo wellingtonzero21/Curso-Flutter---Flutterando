@@ -69,3 +69,4 @@ class CustomSwitch extends StatelessWidget {
           AppControllerPratica.instance.changeTheme();
         },);
   }
+}

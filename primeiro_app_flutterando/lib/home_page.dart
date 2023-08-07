@@ -18,11 +18,36 @@ class _HomePageState extends State<HomePage> {
         actions: [CustomSwitchPratica()],
       ),
       body: Container(
-        child: Center(
-          child:
-           Text("Contador $counter"),
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Contador $counter"),
+      Container(height: 25,),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.black,
+          ),
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.black,
+          ),
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.black,
+          ),
+        ],
+      ),
+            ],   
         ),
-        ),
+      ),
       floatingActionButton:FloatingActionButton(
         child: Icon(Icons.add),
         onPressed:() {
