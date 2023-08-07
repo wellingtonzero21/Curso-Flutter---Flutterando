@@ -20,8 +20,9 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          scrollDirection: Axis.horizontal,
             children: [
               Text("Contador $counter"),
       Container(height: 25,),
