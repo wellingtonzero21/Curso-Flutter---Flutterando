@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:primeiro_app_flutterando/app_widget.dart';
+import 'package:primeiro_app_flutterando/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,8 +14,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
 
-  String email = " ";
-  String password = " ";
+  String email = "";
+  String password = "";
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,8 +49,15 @@ class _LoginPageState extends State<LoginPage> {
                       border: OutlineInputBorder()),
                     ),
               SizedBox(width: double.infinity, height: 10,),
-               ElevatedButton(onPressed: () {}, child: Text('Entrar'),),
-              ]),
+                ElevatedButton(onPressed: () {
+                  if(email == "j" && password == "j"){
+                    print('Entrou');
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+                  } 
+                  else {print('Login inválido');}
+                }, 
+              child: Text('Entrar'),),
+            ]),
           ),
         ),
       ),   
