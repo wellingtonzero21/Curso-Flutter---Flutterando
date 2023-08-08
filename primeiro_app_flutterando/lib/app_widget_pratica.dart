@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:primeiro_app_flutterando/app_controller%20copy.dart';
-import 'package:primeiro_app_flutterando/home_page%20copy.dart';
+import 'package:primeiro_app_flutterando/app_controller_pratica.dart';
+import 'package:primeiro_app_flutterando/home_page_pratica.dart';
+
+import 'login_page_pratica.dart';
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
             ? Brightness.dark
             : Brightness.light,
           ),
-        home: AppWidgetPratica(),
+        home: LoginPage2(),
         );
       }
     );

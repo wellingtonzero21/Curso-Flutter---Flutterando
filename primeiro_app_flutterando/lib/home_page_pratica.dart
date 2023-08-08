@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:primeiro_app_flutterando/app_controller%20copy.dart';
+import 'package:primeiro_app_flutterando/app_controller_pratica.dart';
 
 class AppWidgetPratica extends StatefulWidget {
   @override
