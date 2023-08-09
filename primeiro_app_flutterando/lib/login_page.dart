@@ -28,6 +28,12 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                width: 200,
+                height: 200,
+                child: Image.asset('assets/image/logo.png'),
+                ),
+              Container(height: 20,),
                 SizedBox(height: 80,
               child: TextField(
                 onChanged: (text) {
