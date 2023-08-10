@@ -25,7 +25,12 @@ class _LoginPage2State extends State<LoginPage2> {
           padding: const EdgeInsets.all(35.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: [         
+                SizedBox(
+                  width: 230,
+                  height: 230,
+                  child: Image.asset('assets/image/logo.png')
+                  ),
                 SizedBox(
                   child: TextField(onChanged: (text) {
                     email = text;
@@ -46,19 +51,24 @@ class _LoginPage2State extends State<LoginPage2> {
                   decoration: InputDecoration(
                     labelText: "Password",
                     border: OutlineInputBorder(),
-                  ),
+                    ),
                   ),
                 ),
                 SizedBox(
-                  width: double.infinity, height: 50,),
+                  width: double.infinity, height: 10,
+                  ),
                 ElevatedButton(onPressed: () {
-                  if(email == "joao2" && password == "joao"){
-                    print("entroul");
+                  if(email == "a" && password == "a"){
+                    print("entrou");
+                  Navigator.pushNamed(context, "/home");
+                  } else {
+                    print("Login Invalido");
                   };
-                }, child: Text('Entrar')),
+                  }, child: Text('Entrar')
+                ),
               ],
             ),
-        ),
+          ),
         ),
       ),
     );

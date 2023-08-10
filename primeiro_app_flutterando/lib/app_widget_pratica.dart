@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app_flutterando/app_controller_pratica.dart';
+import 'package:primeiro_app_flutterando/home_page.dart';
 import 'package:primeiro_app_flutterando/home_page_pratica.dart';
 
 import 'login_page_pratica.dart';
@@ -18,7 +19,11 @@ class MyApp extends StatelessWidget {
             ? Brightness.dark
             : Brightness.light,
           ),
-        home: LoginPage2(),
+          initialRoute: "/",
+          routes: {
+            "/" : (context) => LoginPage2(),
+            "/home" : (context) => HomePage(),
+          }
         );
       }
     );
