@@ -7,5 +7,5 @@ import 'home_page.dart';
 import 'home_page_pratica.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(AppWidget());
 }

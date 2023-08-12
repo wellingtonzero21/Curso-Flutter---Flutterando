@@ -10,7 +10,7 @@ class AppWidget extends StatelessWidget {
     return AnimatedBuilder(animation: AppController.instance, builder: (context, child) {
       return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.brown,
         brightness: AppController.instance.isDarkTheme 
         ? Brightness.dark
         : Brightness.light,
