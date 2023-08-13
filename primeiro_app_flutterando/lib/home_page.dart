@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app_flutterando/app_controller.dart';
+import 'package:primeiro_app_flutterando/login_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,6 +14,41 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text("Wellington"), 
+              accountEmail:Text("exemplo@gmail.com"),
+              currentAccountPicture: Image.asset('assets/image/logo.png'), //User Picture 
+            ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Inicio'),
+                subtitle: Text('Tela de início'),
+                onTap: () {
+                  print('home');
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Inicio'),
+                subtitle: Text('Tela de início'),
+                onTap: () {
+                  print('home');
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Sair'),
+                subtitle: Text('Tela de Login'),
+                onTap: () {
+                  Navigator.of(context).pushReplacementNamed('/');
+                },
+              ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text('Home Page'),
         actions: [CustomSwitchPratica()],

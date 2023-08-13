@@ -36,27 +36,28 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 0),
               Card(
                 child: Padding(
-                padding: const EdgeInsets.only(
-                  left: 10,
-                  right: 10,
-                  top: 10,
-                  bottom: 5,
-                ),
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 5,
+                  ),
                   child: Column(
                     children: [
                       TextField(
-                  onChanged: (text) {
+                    onChanged: (text) {
                     email = text;
                   },
                     keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                       labelText: 'E-Mail',
-                      border: OutlineInputBorder()),
-                        ),
-                        SizedBox(width: double.infinity, height: 12,),
+                      border: OutlineInputBorder()
+                      ),
+                    ),
+                      SizedBox(width: double.infinity, height: 12,),
                       TextField(
                         onChanged: (text) {
-                    password = text;
+                        password = text;
                         },
                         obscureText: true,
                         decoration: InputDecoration(
@@ -64,17 +65,17 @@ class _LoginPageState extends State<LoginPage> {
                         border: OutlineInputBorder()),
                       ),
                       SizedBox(width: double.infinity, height: 10,),
-                  ElevatedButton(onPressed: () {
-                    if(email == "j" && password == "j"){
-                      print('Entrou');
-                    Navigator.of(context).pushReplacementNamed("/home");
-                    } 
-                    else {print('Login inválido');}
-                  }, 
-                  child: Container(
-                    width: double.infinity,
-                    child: Text('Entrar', textAlign: TextAlign.center,)
-                    ),
+                      ElevatedButton(onPressed: () {
+                        if(email == "j" && password == "j"){
+                          print('Entrou');
+                        Navigator.of(context).pushReplacementNamed("/home");
+                        } 
+                        else {print('Login inválido');}
+                      }, 
+                        child: Container(
+                          width: double.infinity,
+                          child: Text('Entrar', textAlign: TextAlign.center,)
+                          ),
                       ),
                     ],
                   ),
