@@ -1,8 +1,24 @@
-import 'package:flutter/cupertino.dart';
+import 'package:app_conversor_de_moedas/app/components/currency_box.dart';
+import 'package:app_conversor_de_moedas/app/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomeView extends StatefulWidget {
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  late HomeController homeController;
+  final TextEditingController toText = TextEditingController();
+  final TextEditingController fromText = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    homeController = HomeController(toText, fromText);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,48 +36,26 @@ class HomeView extends StatelessWidget {
                 width: 150,
                 height: 150,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: SizedBox(
-                      height: 65,
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: DropdownButton(
-                          iconEnabledColor: Colors.amber,
-                          iconSize: 30,
-                          isExpanded: true,
-                          underline: Container(
-                            height: 1,
-                            color: Colors.amber,
-                          ),
-                          items: const [
-                            DropdownMenuItem(child: Text("Real")),
-                            DropdownMenuItem(
-                                value: "Dolar", child: Text("Dolar")),
-                          ],
-                          onChanged: (value) {},
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  const Expanded(
-                    flex: 2,
-                    child: TextField(
-                      decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.amber)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.amber))),
-                    ),
-                  ),
-                ],
+              const SizedBox(
+                height: 30,
               ),
-              SizedBox(
+              CurrencyBox(
+                selectedItem: homeController.toCurrency,
+                  controller: toText,
+                  items: homeController.currencies,
+                  onChanged: (model) {setState(() {
+
+                  });}),
+              const SizedBox(
+                height: 20,
+              ),
+              CurrencyBox(
+                selectedItem: homeController.fromCurrency,
+                  controller: fromText,
+                  items: homeController.currencies,
+                  onChanged: (model) {setState(() {
+                  });}),
+              const SizedBox(
                 height: 10,
               ),
               ElevatedButton(onPressed: () {}, child: Text("CONVERTER")),
