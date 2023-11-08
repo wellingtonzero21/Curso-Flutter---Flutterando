@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/foundation.dart';
 import 'package:primeiro_app_flutterando/src/models/todo_model.dart';
 import 'package:primeiro_app_flutterando/src/repositories/todo_repository.dart';
